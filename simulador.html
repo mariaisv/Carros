@@ -1,0 +1,387 @@
+<!--ToxicCode(R) by José Palma Ramos-->
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="utf-8" />
+    <title>SIMULADOR HIPERCARROS</title>
+    <script src="hCarros/hCarros.js"></script>
+    <script>
+        var _45 = 'hCarros/', _36, _2e;
+        function _1d() {
+            _36 = {};
+            _36.introd = document.getElementById("introd");
+            _36._3c = document.getElementById("_3c");
+            _36._19 = document.getElementById("_19");
+            _36._20 = document.getElementById("_20");
+            _36._1a = document.getElementById("_1a");
+            _36._50 = document.getElementById("_50");
+            _36._21 = document.getElementById("_21");
+            _36._2c = document.getElementById("_2c");
+            _36._51 = document.getElementById("_51");
+            _36._14 = document.getElementById("_14");
+        }
+        function _31(_30, _37) {
+            _36._21.innerHTML = '<img class="_28" src="' + _0b(_30, _37) + '" />';
+            window.scrollTo(0, 0);
+        }
+        function _0a() {
+            _36._19.innerHTML = _09();
+            _36._20.innerHTML = _0e();
+        }
+        function _01() {
+            var i, _47, cod = '', nc = _1b();
+            for (i = 0; i < nc; i++) {
+                _47 = _06(i) + ' - ' + _12(i);
+                cod += '<option>' + _47 + '</option>';
+            }
+            _36._14.innerHTML = cod;
+        }
+        function _0d(_30) {
+            var cod = '';
+            cod += '<div class="_48" onclick="_49(' + _30 + ')">';
+            cod += '<img class="_27" src="' + _0b(_30, 0) + '"/>';
+            cod += _06(_30) + ' - ' + _12(_30);
+            cod += '</div>';
+            return cod;
+        }
+        function _09() {
+            var i, cod = '', nc = _1b(); 
+            for (i = 0; i < nc; i++) 
+                cod += _0d(i); 
+            return cod;
+        }
+        function _0e() {
+            var _3e, _2f, np, cod = '', ns = _05(); cod += '<h1>' + _a0() + '</h1>'; for (_3e = 0; _3e < ns; _3e++) {
+                np = _00(_3e); cod += '<h2>' + _02(_3e) + '</h2>'; for (_2f = 0; _2f < np; _2f++) {
+                    cod += '<p class="_32">' + _11(_3e, _2f) + '</p>';
+                }
+            } return cod;
+        }
+        function _24(_30) {
+            var i, cod = '', nl = _08(_30); for (i = 0; i < nl; i++) {
+                cod += '<div class="_3a">'; cod += '<a class="_3b" href="' + _0c(_30, i) + '" target="_blank">'; cod += _03(_30, i); cod += '</a></div>';
+            } return cod;
+        }
+        function _25(_30) {
+            var i, args, cod = '', ni = _07(_30); for (i = 0; i < ni; i++) {
+                args = _30 + ', ' + i; cod += '<div class="_42" onclick="_31(' + args + ')">'; cod += '<img class="_29" src="' + _0b(_30, i) + '" />'; cod += '</div>';
+            } return cod;
+        }
+        function _23(_30) {
+            var cod = '<div class="specs">'; cod += '<div class="_40">ano de lançamento</div>'; cod += '<div class="spec">' + _16(_30, 'ano') + '</div>'; cod += '<div class="_40">motorização</div>'; cod += '<div class="spec">' + _16(_30, 'tipoMot') + '</div>'; cod += '<div class="_40">cilindrada</div>'; cod += '<div class="spec">' + _16(_30, 'cil') + ' cc</div>'; cod += '<div class="_40">potência máxima</div>'; cod += '<div class="spec">' + _16(_30, 'pot') + ' cv, às '; cod += _16(_30, 'rotPot') + ' rpm</div>'; cod += '<div class="_40">binário máximo</div>'; cod += '<div class="spec">' + _16(_30, 'bin') + ' Nm, às '; cod += _16(_30, 'rotBin') + ' rpm</div>'; cod += '<div class="_40">velocidade máxima</div>'; cod += '<div class="spec">' + _16(_30, 'vel') + ' km/h</div>'; cod += '<div class="_40">aceleração máxima</div>'; cod += '<div class="spec">' + _16(_30, 'acel') + ' seg, de 0 a 100 km/h</div>'; cod += '<div class="_40">dimensões</div>'; cod += '<div class="spec">' + _16(_30, 'comp') + ' x '; cod += _16(_30, 'larg') + ' x '; cod += _16(_30, 'alt') + ' mm</div>'; cod += '<div class="_40">peso</div>'; cod += '<div class="spec">' + _16(_30, 'peso') + ' kg</div>'; cod += '</div>'; return cod;
+        }
+        function _13(_30) {
+            var i, cod = '', np = _04(_30); for (i = 0; i < np; i++) {
+                cod += '<p class="_32">' + _15(_30, i) + '</p>';
+            } return cod;
+        }
+        function _03(_30, iLink) {
+            return hiperCarros.colecao[_30].links[iLink].conector;
+        }
+        function _16(_30, _1c) {
+            return hiperCarros.colecao[_30].especs[_1c];
+        }
+        function _3f() {
+            _1d(); _17();
+        }
+        function _17() {
+            _2e = 0; _01(); _0a(); _0f();
+        }
+        function _06(_30) {
+            return hiperCarros.colecao[_30].marcaModelo;
+        }
+        function _0f() {
+            _36._3c.style.display = "none"; _36.introd.style.display = "block"; window.scrollTo(0, 0);
+        }
+        function _49(_30) {
+            _36._3c.style.display = "block"; _36.introd.style.display = "none"; _31(_30, 0); _36._50.innerHTML = _06(_30) + ' - ' + _12(_30); _36._2c.innerHTML = _23(_30) + _24(_30); _36._51.innerHTML = _13(_30); _36._1a.innerHTML = _25(_30); _2e = _30; _14.selectedIndex = _2e;
+        }
+        function _1e() {
+            _2e = _14.selectedIndex; _49(_2e);
+        }
+        function _1b() {
+            return hiperCarros.colecao.length;
+        }
+        function _07(_30) {
+            return hiperCarros.colecao[_30].imags.length;
+        }
+        function _08(_30) {
+            return hiperCarros.colecao[_30].links.length;
+        }
+        function _04(_30) {
+            return hiperCarros.colecao[_30].texto.length;
+        }
+        function _00(_3e) {
+            return hiperCarros.introd[_3e].texto.length;
+        }
+        function _05() {
+            return hiperCarros.introd.length;
+        }
+        function _15(_30, _2f) {
+            return hiperCarros.colecao[_30].texto[_2f];
+        }
+        function _11(_3e, _2f) {
+            return hiperCarros.introd[_3e].texto[_2f];
+        }
+        function _18(recAv) {
+            var _46 = _1b() - 1; _2e += recAv; if (_2e < 0) _2e = _46; if (_2e > _46) _2e = 0; _14.selectedIndex = _2e; _49(_2e);
+        }
+        function _0b(_30, _37) {
+            return _45 + hiperCarros.colecao[_30].imags[_37];
+        }
+        function _02(_3e) {
+            return hiperCarros.introd[_3e].subtitulo;
+        }
+        function _a0() {
+            return hiperCarros.titulo;
+        }
+        function _0c(_30, iLink) {
+            return hiperCarros.colecao[_30].links[iLink].url;
+        }
+        function _12(_30) {
+            return hiperCarros.colecao[_30].versao;
+        }</script>
+    <style>
+        ._48 {
+            float: left;
+            width: 108px;
+            opacity: 0.6;
+            background-color: #000000;
+            height: 115px;
+            border: 1px solid #ffffff;
+            text-align: center;
+            font: bold 11px arial;
+            color: #ffffff;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        ._48:hover {
+            opacity: 1.0;
+        }
+
+        ._27 {
+            width: 100%;
+        }
+
+        ._32 {
+            font: 15px/1.5 verdana;
+        }
+
+        ._28 {
+            width: 690px;
+            border: 2pxsolid #ffffff;
+        }
+
+        ._40 {
+            width: 198px;
+            background-color: #408080;
+            color: #ffffff;
+            text-align: center;
+            padding: 4px 0px 1px 0px;
+            font: bold 11px arial;
+        }
+
+        .spec {
+            width: 198px;
+            background-color: #ddeeee;
+            color: #000000;
+            text-align: center;
+            padding: 2px 0px 4px 0px;
+            font: 13px arial;
+        }
+
+        .specs {
+            width: 198px;
+            border: 1px solid #006060;
+        }
+
+        ._42 {
+            width: 138px;
+            opacity: 0.6;
+            border: 1px solid #ffffff;
+            margin-bottom: 25px;
+            cursor: zoom-in;
+            line-height: 0px;
+        }
+
+        ._29 {
+            width: 100%;
+        }
+
+        ._42:hover {
+            opacity: 1.0;
+        }
+
+        ._3a {
+            margin-top: 15px;
+            text-align: right;
+        }
+
+        ._3b {
+            color: #80a0a0;
+            font: bold 15px/1.2 arial;
+            text-decoration: none;
+        }
+
+        ._3b:hover {
+            color: #000000;
+            text-decoration: underline;
+        }
+
+        body {
+            background-color: #80a0a0;
+        }
+
+        h1 {
+            font: bold 26px arial;
+            margin-top: 0px;
+        }
+
+        h2 {
+            font: bold 20px arial;
+            margin-top: 25px;
+            color: #006060;
+            border-bottom: 2px solid #006060;
+        }
+
+        #_43 {
+            width: 900px;
+            border: 5px solid #006060;
+            margin: 0px auto 0px auto;
+        }
+
+        #introd {
+            overflow: auto;
+            width: 900px;
+            background-color: #006060;
+        }
+
+        #_3c {
+            overflow: auto;
+            width: 900px;
+            background-color: #006060;
+        }
+
+        #_19 {
+            float: left;
+            width: 260px;
+            background-color: #006060;
+            padding: 40px 15px 40px 45px;
+        }
+
+        #_20 {
+            float: left;
+            width: 515px;
+            background-color: #ffffff;
+            padding: 40px 40px 40px 25px;
+        }
+
+        #carro {
+            float: left;
+            width: 694px;
+        }
+
+        #_1a {
+            float: left;
+            width: 140px;
+            padding: 43px 41px 0px 25px;
+            height: 800px;
+        }
+
+        #_50 {
+            width: 694px;
+            padding: 10px 0px 10px 0px;
+            text-align: center;
+            font: bold 20px arial;
+            color: #ffffff;
+        }
+
+        #_21 {
+            width: 694px;
+        }
+
+        #_44 {
+            width: 694px;
+            padding: 3px 0px 3px 0px;
+        }
+
+        #_22 {
+            overflow: auto;
+            width: 694px;
+            padding: 0px;
+            background-color: #ffffff;
+        }
+
+        #_34,
+        #_35 {
+            font: bold 17px arial;
+            width: 30px;
+            color: #006060;
+            cursor: pointer;
+            padding: 0px;
+        }
+
+        #_34 {
+            text-align: left;
+        }
+
+        #_35 {
+            text-align: right;
+        }
+
+        #botIntro {
+            font: bold 16px arial;
+            width: 107px;
+            color: #006060;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #_14 {
+            font: 16px arial;
+            cursor: pointer;
+        }
+
+        #_2c {
+            float: left;
+            width: 200px;
+            padding: 27px 5px 40px 15px;
+            background-color: #ffffff;
+        }
+
+        #_51 {
+            float: left;
+            width: 434px;
+            padding: 10px 15px 40px 15px;
+            background-color: #ffffff;
+        }
+    </style>
+</head>
+
+<body onload="_3f()">
+    <div id="_43">
+        <div id="introd">
+            <div id="_19"></div>
+            <div id="_20"></div>
+        </div>
+        <div id="_3c">
+            <div id="carro">
+                <div id="_50"></div>
+                <div id="_21"></div>
+                <div id="_44"><button id="botIntro" onclick="_0f()">introdução</button>&nbsp;<button id="_34"
+                        onclick="_18(-1)">&#9664</button><select id="_14" onchange="_1e()"></select><button id="_35"
+                        onclick="_18(1)">&#9654</button></div>
+                <div id="_22">
+                    <div id="_2c"></div>
+                    <div id="_51"></div>
+                </div>
+            </div>
+            <div id="_1a"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+<!--ToxicCode(R) by José Palma Ramos-->

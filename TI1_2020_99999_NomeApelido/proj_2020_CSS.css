@@ -1,0 +1,87 @@
+/*
+PROJ_2020: AVAL. Tecnol. Internet (I) 
+Aluno num. 99999, Nome Apelido
+*/
+
+/********** FOLHA DE ESTILOS **********/
+
+/*superclasses*/
+body {
+    background-color: #80a0a0;
+}
+
+p {
+    font: 15px/1.5 verdana;
+}
+
+h1 {
+    font: bold 26px arial;
+    margin-top: 0px;
+}
+
+h2 {
+    font: bold 20px arial;
+    margin-top: 25px;
+    color: #006060;
+    border-bottom: 2px solid #006060;
+}
+
+#introd-page {
+    width: 900px;
+    border: 5px solid #006060;
+    margin: 0px auto 0px auto;
+}
+
+#introd {
+    overflow: auto;
+    width: 900px;
+    background-color: #006060;
+}
+
+#carros-lista {
+    float: left;
+    width: 260px;
+    background-color: #006060;
+    padding: 40px 15px 40px 45px;
+}
+
+#introd-texto {
+    float: left;
+    width: 515px;
+    background-color: #ffffff;
+    padding: 40px 40px 40px 25px;
+}
+
+.carro-lista {
+    float: left;
+    width: 108px;
+    opacity: 0.6;
+    background-color: #000000;
+    height: 115px;
+    border: 1px solid #ffffff;
+    text-align: center;
+    font: bold 11px arial;
+    color: #ffffff;
+    margin: 10px;
+    cursor: pointer;
+}
+.carro-lista:hover{
+    opacity: 1.0;
+}
+
+
+.marca-modelo{
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+
+/*subclasses*/
+
+
+/*instâncias*/
+
+
+
+
+
