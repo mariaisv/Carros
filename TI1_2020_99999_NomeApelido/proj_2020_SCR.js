@@ -33,9 +33,9 @@ function getCarsImage() {
     var lista = '';
     //Adiciona a primeira imagem de cada carro na minha lista
     for (let index = 0; index < nCars; index++) {
-
-        lista = lista + '<div class="carro-lista"><img src="../hCarros/' + hiperCarros.colecao[index].imags[0] + '" width="50%" height="50%"/>'
-        lista = lista + '<div class="">' + hiperCarros.colecao[index].marcaModelo + ' - ' + hiperCarros.colecao[index].versao + '</div></div>';
+        console.log(hiperCarros.colecao[index].imags[0]);
+        lista = lista + '<div class="carro-lista"><img class="carro-img" src="../hCarros/' + hiperCarros.colecao[index].imags[0] + '" />';
+        lista = lista + hiperCarros.colecao[index].marcaModelo + ' - ' + hiperCarros.colecao[index].versao + '</div>';
     }
     return lista;
 }

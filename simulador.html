@@ -95,7 +95,14 @@
             _36._3c.style.display = "none"; _36.introd.style.display = "block"; window.scrollTo(0, 0);
         }
         function _49(_30) {
-            _36._3c.style.display = "block"; _36.introd.style.display = "none"; _31(_30, 0); _36._50.innerHTML = _06(_30) + ' - ' + _12(_30); _36._2c.innerHTML = _23(_30) + _24(_30); _36._51.innerHTML = _13(_30); _36._1a.innerHTML = _25(_30); _2e = _30; _14.selectedIndex = _2e;
+            _36._3c.style.display = "block";
+            _36.introd.style.display = "none"; 
+            _31(_30, 0); _36._50.innerHTML = _06(_30) + ' - ' + _12(_30); 
+            _36._2c.innerHTML = _23(_30) + _24(_30); 
+            _36._51.innerHTML = _13(_30); 
+            _36._1a.innerHTML = _25(_30); 
+            _2e = _30; 
+            _14.selectedIndex = _2e;
         }
         function _1e() {
             _2e = _14.selectedIndex; _49(_2e);
@@ -125,7 +132,8 @@
             return hiperCarros.introd[_3e].texto[_2f];
         }
         function _18(recAv) {
-            var _46 = _1b() - 1; _2e += recAv; if (_2e < 0) _2e = _46; if (_2e > _46) _2e = 0; _14.selectedIndex = _2e; _49(_2e);
+            var _46 = _1b() - 1; _2e += recAv; 
+            if (_2e < 0) _2e = _46; if (_2e > _46) _2e = 0; _14.selectedIndex = _2e; _49(_2e);
         }
         function _0b(_30, _37) {
             return _45 + hiperCarros.colecao[_30].imags[_37];
